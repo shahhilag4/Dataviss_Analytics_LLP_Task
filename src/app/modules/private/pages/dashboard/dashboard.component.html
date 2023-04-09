@@ -1,0 +1,435 @@
+<mat-toolbar>Dashboard</mat-toolbar>
+
+
+<section class="user-section" fxLayout fxLayout.lt-lg="column" fxLayoutGap="20px">
+    <div class="user-profile-container"  fxFlex="1 1 100%">
+        <app-ui-card>
+            <app-ui-card-body>
+                <div class="user-profile-details"  fxLayoutWrap fxLayout="row">
+                    <div class="user-profil-details__items user-profile-details__urgent" >
+                        <h3>FLOOR:</h3>
+                        <mat-form-field appearance="fill" class="decrease">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option value="option1">1</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="user-profile-details__items user-profile-details__urgent" >
+                        <h3>SECTION:</h3>
+                        <mat-form-field appearance="fill" class="decrease">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option value="option1">1</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="user-profile-details__items user-profile-details__urgent" >
+                        <h3>VIEW:</h3>
+                        <mat-form-field appearance="fill" class="decrease">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option value="option1">1</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="user-profile-details__items user-profile-details__urgent" >
+                        <h3>METER:</h3>
+                        <mat-form-field appearance="fill" class="decrease">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option value="option1">1</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </app-ui-card-body>
+        </app-ui-card>
+    </div>
+
+</section>
+<section class="user-section" fxLayout fxLayout.lt-lg="column" fxLayoutGap="20px">
+    <div class="user-profile-container"  fxFlex="1 1 100%">
+        <app-ui-card>
+            <app-ui-card-body>
+                <div class="user-profile-details"  fxLayoutWrap fxLayout="row">
+                    <div class="user-profile-details__items user-profile-details__urgent" >
+                        <p class="user-profile-details__paragraph">ENERGY: <span class="red-text">156,610 kWh</span></p>
+                    </div>
+                    <div class="user-profile-details__items user-profile-details__urgent" >
+                        <p class="user-profile-details__paragraph">LAST UPDATED: <span class="red-text">22/06/2021</span> <span class="red-text">12:07 PM</span></p>
+                    </div>
+                    <div class="user-profile-details__items user-profile-details__urgent" >
+                        <p class="user-profile-details__paragraph">NEXT HOUR PREDICTED ENERY: <span class="red-text">156,610 kWh</span></p>
+                    </div>
+                </div>
+            </app-ui-card-body>
+        </app-ui-card>
+    </div>
+    
+</section>
+
+<section class="user-section" fxLayout fxLayout.lt-lg="column" fxLayoutGap="20px">
+    <div class="user-profile-container"  fxFlex="1 1 100%">
+        <app-ui-card>
+            <h3 class="header">KEY PARAMETERS</h3>
+            <app-ui-card-body>
+               <!-- 
+    Demonstrates using a radial gauge as a progress indicator. 
+    The gauge value is bound to the component's value$ observable property.
+-->
+        <radial-gauge #progress_gauge
+        [class]="gauge"
+        [value]="(value$ | async)"
+
+        width="100"
+        height="100"
+        units="Voltage(V)"
+        min-value="0"
+        max-value="500"
+
+        color-plate="transparent"
+
+        ticks-angle="315"
+        start-angle="25"
+        stroke-ticks="false"
+        major-ticks="[,]"
+        minor-ticks="0"
+        highlights='[]'
+        highlights-width="10"
+
+        border-shadow-width="0"
+        border-inner-width="1"
+        border-middle-width="0"
+        border-outer-width="0"
+        borders="true"
+        color-border-shadow="false"
+        color-border-inner="#eee"
+        color-border-inner-end="#eee"
+
+
+        bar-progress="true"
+        bar-width="10"
+        bar-shadow="#f00"
+        bar-stroke-width="0"
+
+        color-bar="transparent"
+        color-major-ticks="transparent"
+
+        value-box="true"
+        color-value-box="transparent"
+        color-value-text="#000000"
+        color-value-text-shadow="false"
+        color-value-box-rect="transparent"
+        color-value-box-background="transparent"
+
+        font-units-size="50"
+        font-value-size="75"
+        value-text-shadow="false"
+        value-int="2"
+        value-dec="0"
+        value-box-stroke="0"
+
+        needle="false"
+        animation-rule="linear"
+        animation-duration="200"
+
+
+        class="gauge"
+
+        >
+        </radial-gauge>
+        <radial-gauge #progress_gauge
+
+        [value]="(value$ | async)"
+
+        width="100"
+        height="100"
+        units="Current(A)"
+        min-value="0"
+        max-value="500"
+
+        color-plate="transparent"
+
+        ticks-angle="315"
+        start-angle="25"
+        stroke-ticks="false"
+        major-ticks="[,]"
+        minor-ticks="0"
+        highlights='[]'
+        highlights-width="10"
+
+        border-shadow-width="0"
+        border-inner-width="1"
+        border-middle-width="0"
+        border-outer-width="0"
+        borders="true"
+        color-border-shadow="false"
+        color-border-inner="#eee"
+        color-border-inner-end="#eee"
+
+
+        bar-progress="true"
+        bar-width="10"
+        bar-shadow="#f00"
+        bar-stroke-width="0"
+
+        color-bar="transparent"
+        color-major-ticks="transparent"
+
+        value-box="true"
+        color-value-box="transparent"
+        color-value-text="#000000"
+        color-value-text-shadow="false"
+        color-value-box-rect="transparent"
+        color-value-box-background="transparent"
+
+        font-units-size="50"
+        font-value-size="75"
+        value-text-shadow="false"
+        value-int="2"
+        value-dec="0"
+        value-box-stroke="0"
+
+        needle="false"
+        animation-rule="linear"
+        animation-duration="200"
+
+
+        class="gauge"
+
+        >
+        </radial-gauge>
+        <radial-gauge #progress_gauge
+
+        [value]="(value$ | async)"
+
+        width="100"
+        height="100"
+        units="Power(kW)"
+        min-value="0"
+        max-value="500"
+
+        color-plate="transparent"
+
+        ticks-angle="315"
+        start-angle="25"
+        stroke-ticks="false"
+        major-ticks="[,]"
+        minor-ticks="0"
+        highlights='[]'
+        highlights-width="10"
+
+        border-shadow-width="0"
+        border-inner-width="1"
+        border-middle-width="0"
+        border-outer-width="0"
+        borders="true"
+        color-border-shadow="false"
+        color-border-inner="#eee"
+        color-border-inner-end="#eee"
+
+
+        bar-progress="true"
+        bar-width="10"
+        bar-shadow="#f00"
+        bar-stroke-width="0"
+
+        color-bar="transparent"
+        color-major-ticks="transparent"
+
+        value-box="true"
+        color-value-box="transparent"
+        color-value-text="#000000"
+        color-value-text-shadow="false"
+        color-value-box-rect="transparent"
+        color-value-box-background="transparent"
+
+        font-units-size="50"
+        font-value-size="75"
+        value-text-shadow="false"
+        value-int="2"
+        value-dec="0"
+        value-box-stroke="0"
+
+        needle="false"
+        animation-rule="linear"
+        animation-duration="200"
+
+
+        class="gauge"
+
+        >
+        </radial-gauge>
+        <radial-gauge #progress_gauge
+
+        [value]="(value$ | async)"
+
+        width="100"
+        height="100"
+        units="Power Factor"
+        min-value="0"
+        max-value="500"
+
+        color-plate="transparent"
+
+        ticks-angle="315"
+        start-angle="25"
+        stroke-ticks="false"
+        major-ticks="[,]"
+        minor-ticks="0"
+        highlights='[]'
+        highlights-width="10"
+
+        border-shadow-width="0"
+        border-inner-width="1"
+        border-middle-width="0"
+        border-outer-width="0"
+        borders="true"
+        color-border-shadow="false"
+        color-border-inner="#eee"
+        color-border-inner-end="#eee"
+
+
+        bar-progress="true"
+        bar-width="10"
+        bar-shadow="#f00"
+        bar-stroke-width="0"
+
+        color-bar="transparent"
+        color-major-ticks="transparent"
+
+        value-box="true"
+        color-value-box="transparent"
+        color-value-text="#000000"
+        color-value-text-shadow="false"
+        color-value-box-rect="transparent"
+        color-value-box-background="transparent"
+
+        font-units-size="50"
+        font-value-size="75"
+        value-text-shadow="false"
+        value-int="2"
+        value-dec="0"
+        value-box-stroke="0"
+
+        needle="false"
+        animation-rule="linear"
+        animation-duration="200"
+
+
+        class="gauge"
+
+        >
+        </radial-gauge>
+        <radial-gauge #progress_gauge
+
+        [value]="(value$ | async)"
+
+        width="100"
+        height="100"
+        units="Frequency(Hz)"
+        min-value="0"
+        max-value="500"
+
+        color-plate="transparent"
+
+        ticks-angle="315"
+        start-angle="25"
+        stroke-ticks="false"
+        major-ticks="[,]"
+        minor-ticks="0"
+        highlights='[]'
+        highlights-width="10"
+
+        border-shadow-width="0"
+        border-inner-width="1"
+        border-middle-width="0"
+        border-outer-width="0"
+        borders="true"
+        color-border-shadow="false"
+        color-border-inner="#eee"
+        color-border-inner-end="#eee"
+
+
+        bar-progress="true"
+        bar-width="10"
+        bar-shadow="#f00"
+        bar-stroke-width="0"
+
+        color-bar="transparent"
+        color-major-ticks="transparent"
+
+        value-box="true"
+        color-value-box="transparent"
+        color-value-text="#000000"
+        color-value-text-shadow="false"
+        color-value-box-rect="transparent"
+        color-value-box-background="transparent"
+
+        font-units-size="50"
+        font-value-size="75"
+        value-text-shadow="false"
+        value-int="2"
+        value-dec="0"
+        value-box-stroke="0"
+
+        needle="false"
+        animation-rule="linear"
+        animation-duration="200"
+
+
+        class="gauge"
+
+        >
+        </radial-gauge>
+
+            </app-ui-card-body>
+        </app-ui-card>
+    </div>
+
+</section>
+
+<section class="stats-container">
+    <div fxLayoutAlign.lt-lg="space-around" fxLayoutAlign="space-between" class="stats-list">
+        <div class="bar-chart" fxFlex="10 10 50%" >
+            <app-ui-card>
+                <app-ui-card-header>
+                    <app-ui-card-header-title>Power</app-ui-card-header-title>
+                </app-ui-card-header>
+                <app-ui-card-body style="overflow: hidden; max-width: 100%; width: 100%;">
+                    <div style=" width: 98%; overflow: hidden; position: relative;">
+                    <canvas baseChart 
+                    [datasets]="lineChartData" 
+                    [labels]="lineChartLabels" 
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors" 
+                    [legend]="lineChartLegend" 
+                    [chartType]="lineChartType" 
+                    [plugins]="lineChartPlugins"
+                    (chartHover)="chartHovered($event)" 
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+                    </div>
+                </app-ui-card-body>
+            </app-ui-card>
+        </div>
+        <div class="bar-chart" fxFlex="1 1 50%" >
+            <app-ui-card>
+                <app-ui-card-header>
+                    <app-ui-card-header-title>Perfomance</app-ui-card-header-title>
+                </app-ui-card-header>
+                <div style=" width: 98%; overflow: hidden; position: relative;">
+                    <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                    </canvas>
+                    </div>
+            </app-ui-card>
+        </div>
+    </div>
+</section>
+

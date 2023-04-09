@@ -1,0 +1,21 @@
+<mat-toolbar>Forms</mat-toolbar>
+<section class="simple-form">
+    <app-ui-card>
+        <app-ui-card-header>
+            <app-ui-card-header-title>Simple Form</app-ui-card-header-title>
+        </app-ui-card-header>
+        <app-ui-card-body>
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Edit">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" placeholder="Edit">
+                </mat-form-field>
+            </div>
+            <div fxLayout>
+                <app-btn-blue [btnLarge]="true" [btnShadow]="true" [fullLengthBtn]="true">Submit</app-btn-blue>
+            </div>
+        </app-ui-card-body>
+    </app-ui-card>
+</section>
